@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }]
+  },
+
+  "globals": {
+    "API_URLS": true
+  },
+  
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "airbnb"
+}

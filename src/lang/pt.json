@@ -1,0 +1,11 @@
+{
+  "common": {
+    "login": "Entrar",
+    "password": "Senha",
+    "username": "Usuário"
+  },
+  
+  "errors": {
+    "required": "Obrigatório"
+  }
+}
