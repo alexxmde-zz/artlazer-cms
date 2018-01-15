@@ -1,11 +1,14 @@
 {
   "common": {
+    "errorOcurred": "An error ocurred",
     "login": "Login",
     "password": "Password",
     "username": "Username"
   },
   
   "errors": {
-    "required": "Required"
+    "required": "Required",
+    "ETIMEDOUT": "Request timed out",
+    "unknown": "Erro desconhecido"
   }
 }

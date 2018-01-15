@@ -29,6 +29,7 @@ const logo = require('../../assets/logo.png');
 export default class Login extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
+    push: PropTypes.func.isRequired,
     setToken: PropTypes.func.isRequired,
     t: PropTypes.func.isRequired,
   }
@@ -41,9 +42,8 @@ export default class Login extends React.Component {
 
   async submit(form) {
     const { setToken, push: routerPush } = this.props;
-    const { token, user } = await setToken(form.toJS());
-    localStorage.user = JSON.stringify(user);
-    localStorage.token = token;
+    await setToken(form.toJS());
+
     routerPush(INDEX_ROUTE);
   }
 

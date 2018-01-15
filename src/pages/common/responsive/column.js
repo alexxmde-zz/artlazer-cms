@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 function getWidthString(span) {
   const width = (span / 12) * 100;
-  return `flex-basis: ${width}%;`;
+  return `width: ${width}%;`;
 }
 
 function getMarginString(offset) {
