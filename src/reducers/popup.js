@@ -14,7 +14,7 @@ const initialState = fromJS({
 const errorPopUp = error => fromJS({
   popUpType: ERROR,
   title: t('common.errorOcurred'),
-  message: makeErrorMessage(error.errno),
+  message: makeErrorMessage(error),
   status: VISIBLE,
 });
 

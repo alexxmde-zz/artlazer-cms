@@ -13,6 +13,7 @@ export const PopUpBox = Column.extend`
 export const TitleBox = Row.extend`
   padding: 8px 16px;
   color: colors.white;
+  align-items: center;
   background-color: ${({ type }) => {
     switch (type) {
       case ERROR:

@@ -9,7 +9,7 @@ import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { createLogger } from 'redux-logger';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import rootReducer from '../../reducers';
 import Login from '../login';
 import Dashboard from '../dashboard';
@@ -64,7 +64,7 @@ Routes.propTypes = {
   popUp: ImmutablePropTypes.map.isRequired,
 };
 
-const ConnectedRoutes = connect(selector)(Routes);
+const ConnectedRoutes = withRouter(connect(selector)(Routes));
 
 export default () => (
   <ConnectedRouter history={history}>

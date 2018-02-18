@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import translate from 'counterpart';
 import lang from '../lang';
 
@@ -9,15 +10,16 @@ Object.keys(lang).forEach((locale) => {
   });
 });
 
+export const getLocale = () => navigator.languages[0].substr(0, 2);
 export const t = key => translate(key, {
-  locale: navigator.languages[0].substr(0, 2),
+  locale: getLocale(),
 });
 
-export const makeErrorMessage = (errno) => {
-  switch (errno) {
+export const makeErrorMessage = (error) => {
+  switch (error.errno) {
     case 'ETIMEDOUT':
       return t('errors.ETIMEDOUT');
-    default:
-      return t('errors.unknown');
   }
+
+  return `Server says ${error.response.body.message}`;
 };
